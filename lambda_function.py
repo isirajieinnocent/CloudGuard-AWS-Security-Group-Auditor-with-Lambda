@@ -4,7 +4,7 @@ def lambda_handler(event, context):
     ec2 = boto3.resource('ec2')
 
     sns_client = boto3.client('sns')
-    sns_topic_arn = 'arn:aws:sns:us-east-1:050752610040:SecurityGroupAuditAlerts'
+    sns_topic_arn = 'arn:aws:sns:us-east-1:050752610:SecurityGroupAuditAlerts'
 
     security_groups = ec2.security_groups.all()
     for sg in security_groups:
