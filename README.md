@@ -1,8 +1,8 @@
-Project Overview
+**Project Overview**
 
 The project is a Security Group Audit Tool designed to enhance the security posture of an AWS environment. It programmatically checks AWS security groups for potentially risky inbound rules, such as those allowing unrestricted access from all IP addresses (0.0.0.0/0). If such rules are found, the tool generates a warning and sends an alert via AWS SNS (Simple Notification Service).
 
-Key Features
+**Key Features**
 Automated Security Check:
 
 The Lambda function iterates through all security groups in the AWS account.
