@@ -1,3 +1,8 @@
+**The Architecture**
+
+![image](https://github.com/user-attachments/assets/73f466ca-6ec5-4680-b8a4-179fa44d3db3)
+
+
 **Project Overview**
 
 The project is a Security Group Audit Tool designed to enhance the security posture of an AWS environment. It programmatically checks AWS security groups for potentially risky inbound rules, such as those allowing unrestricted access from all IP addresses (0.0.0.0/0). If such rules are found, the tool generates a warning and sends an alert via AWS SNS (Simple Notification Service).
