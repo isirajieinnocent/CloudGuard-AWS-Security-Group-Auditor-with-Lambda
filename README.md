@@ -1,40 +1,57 @@
-**The Architecture**
+<h1> Project Overview </h1>
+
+This project is a Security Group Audit Tool designed to enhance the security posture of an AWS environment. It programmatically checks AWS security groups for potentially risky inbound rules (e.g., unrestricted access from 0.0.0.0/0) and sends real-time alerts via AWS SNS (Simple Notification Service).
+
+<h1> The Architecture </h1> 
 
 ![image](https://github.com/user-attachments/assets/73f466ca-6ec5-4680-b8a4-179fa44d3db3)
 
+<h1> Solution Overview </h1>
 
-**Project Overview**
+**Automated Security Check:**
 
-The project is a Security Group Audit Tool designed to enhance the security posture of an AWS environment. It programmatically checks AWS security groups for potentially risky inbound rules, such as those allowing unrestricted access from all IP addresses (0.0.0.0/0). If such rules are found, the tool generates a warning and sends an alert via AWS SNS (Simple Notification Service).
+The AWS Lambda function iterates through all security groups in the AWS account.
 
-**Key Features**
-Automated Security Check:
+Examines inbound rules (ip_permissions) for configurations that allow unrestricted traffic.
 
-The Lambda function iterates through all security groups in the AWS account.
-It examines their inbound rules (ip_permissions) for configurations that allow unrestricted traffic.
-Real-Time Alerts:
+**Real-Time Alerts:**
 
-When a risky rule is detected, the function:
+***When a risky rule is detected:***
+
 Logs a detailed warning message about the rule and its associated security group.
-Publishes an alert to an SNS topic, which can notify administrators via email, SMS, or other channels.
-Serverless Architecture:
 
-Fully managed and scalable since it leverages AWS Lambda, requiring no server infrastructure.
-Customizable:
+Publishes an alert to an SNS topic, notifying administrators via email, SMS, or other channels.
 
-The solution can be extended to include additional rule checks or to remediate risky configurations automatically.
-Purpose and Value
-Proactive Risk Management:
+**Serverless Architecture:**
 
-Identifying and flagging misconfigured security groups minimizes exposure to unauthorized access and potential data breaches.
-Cost-Effective Monitoring:
+Fully managed and scalable, leveraging AWS Lambda with no server infrastructure required.
 
-The use of AWS Lambda ensures the solution is cost-efficient and only runs when triggered.
-Integration with Existing Workflows:
+**Customizable:**
 
-By leveraging SNS, it seamlessly integrates into notification or ticketing systems for immediate response.
-Technologies Used
-AWS Lambda: For serverless execution.
-AWS EC2 SDK (Boto3): To query and analyze security groups.
-AWS SNS: For sending alerts to administrators.
-This project demonstrates proficiency in AWS, serverless computing, and cloud security best practices, showcasing skills in Python programming, resource auditing, and real-time alerting systems. It is ideal for organizations prioritizing secure and automated cloud environments.
+Can be extended to include additional rule checks or automate remediation of risky configurations.
+
+<h1> Key Technologies </h1>
+
+AWS Lambda: Serverless execution for automated security checks.
+
+**AWS EC2 SDK (Boto3):** Queries and analyzes security groups.
+
+**AWS SNS:** Sends real-time alerts to administrators.
+
+<h1> Impact  </h1>
+
+**Proactive Risk Management:** Identifies and flags misconfigured security groups, minimizing exposure to unauthorized access and potential data breaches.
+
+**Cost-Effective Monitoring:** Leverages AWS Lambda for cost-efficient, on-demand execution.
+
+**Seamless Integration:** Integrates with existing workflows via AWS SNS for immediate response.
+
+<h1> Key Achievements </h1>
+
+Designed a serverless solution to automate security group auditing.
+
+Implemented real-time alerting using AWS SNS for immediate risk notification.
+
+Enhanced cloud security posture by identifying and flagging risky configurations.
+
+This project highlights my expertise in AWS serverless architecture, cloud security best practices, and Python programming. It demonstrates my ability to build scalable, cost-effective solutions for proactive risk management in cloud environments.
